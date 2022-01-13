@@ -1,0 +1,13 @@
+def bubbleSort(mass):
+    n = len(mass)
+ 
+    for i in range(n-1):
+        for j in range(0, n-i-1):
+            if mass[j] > mass[j + 1] :
+                mass[j], mass[j + 1] = mass[j + 1], mass[j]
+
+
+mass = [64, 34, 25, 12, 22, 12, 15]
+
+for i in range(len(mass)):
+    print ("% d" % mass[i]),

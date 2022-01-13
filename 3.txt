@@ -1,0 +1,12 @@
+def merge(mass1, mass2):
+    result, it1, it2 = [], iter(mass1), iter(mass2)
+    el1 = next(it1, None)
+    el2 = next(it2, None)
+    while el1 is not None or el2 is not None:
+        if el1 is None or (el2 is not None and el2 < el1):
+            result.append(el2)
+            el2 = next(it2, None)
+        else:
+            result.append(el1)
+            el1 = next(it1, None)
+    return result
